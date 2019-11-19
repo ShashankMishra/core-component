@@ -1,0 +1,8 @@
+{
+  "name": "Core-Component",
+  "version": "1.0.0",
+  "description": "Core Component Service",
+  "dependencies": {
+    "serverless": "^1.48.3"
+  }
+}

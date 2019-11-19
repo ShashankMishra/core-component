@@ -1,14 +1,27 @@
+*.class
 .gradle
-/build/
+**/build/
+**/bin/
+**/.settings/
+**/.project
+**/.classpath
+**/out/
+.idea/
+**/node_modules/
+collateral-service.iml
+local.json
+application-local.yml
+local.yml
+newman/*
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Package Files
+**/*.jar
+**/*.war
+**/*.ear
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# Serverless directories
+**/.serverless
+.dynamo.pid
+.dynamodb/
+.DS_Store
 
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties

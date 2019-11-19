@@ -1,0 +1,26 @@
+service: core-component
+
+custom:
+  apiVersion: v1
+
+
+
+provider:
+  name: aws
+  runtime: java8
+  region: us-east-1
+  versionFunctions: false
+  stage: dev
+  timeout: 30
+
+package:
+  artifact: ./build/libs/core-component-0.1.jar
+
+functions:
+
+  place-order:
+    handler: com.serverless.corecomponent.functions.ItemFunction
+    events:
+      - http:
+          path: /${self:custom.apiVersion}/{proxy+}
+          method: any

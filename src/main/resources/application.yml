@@ -1,4 +1,4 @@
-service:
+client:
   order-service: http://localhost:8082/v1
   inventory-service: http://localhost:8083/v1
 

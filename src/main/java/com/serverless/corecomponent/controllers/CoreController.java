@@ -35,12 +35,5 @@ public class CoreController {
         return Objects.nonNull(order) ? HttpResponse.ok(order) : HttpResponse.notFound();
     }
 
-    @Get(value = "/item", produces = MediaType.APPLICATION_JSON)
-    public HttpResponse getInventory() {
-        LOGGER.info("Get all items");
-        List<Item> items = service.getAllItems();
-        return Objects.nonNull(items) ? HttpResponse.ok(items) : HttpResponse.notFound();
-    }
-
 
 }

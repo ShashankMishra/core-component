@@ -35,7 +35,4 @@ public class Service {
         return orderServiceClient.get(orderId);
     }
 
-    public List<Item> getAllItems() {
-        return inventoryServiceClient.getAll();
-    }
 }

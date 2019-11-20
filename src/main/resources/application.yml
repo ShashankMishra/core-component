@@ -1,0 +1,10 @@
+service:
+  order-service: http://localhost:8082/v1
+  inventory-service: http://localhost:8083/v1
+
+micronaut:
+  application:
+    name: core-component
+  server:
+    port: 8084
+

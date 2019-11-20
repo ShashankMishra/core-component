@@ -1,7 +1,9 @@
 package com.serverless.corecomponent.services;
 
-import com.serverless.corecomponent.clients.InventoryClient;
+import com.serverless.corecomponent.clients.InventoryServiceClient;
+import com.serverless.corecomponent.clients.OrderServiceClient;
 import com.serverless.corecomponent.models.Item;
+import com.serverless.corecomponent.models.Order;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,13 +16,26 @@ public class Service {
     private static final Logger LOGGER = LoggerFactory.getLogger(Service.class);
 
     @Inject
-    InventoryClient inventoryClient;
+    InventoryServiceClient inventoryServiceClient;
 
-    public void placeOrder(List<Item> item) {
+    @Inject
+    OrderServiceClient orderServiceClient;
+
+    public void placeOrder(Order order) {
+
         LOGGER.info("Saving Order ...");
-        inventoryClient.save(item);
+        orderServiceClient.save(order);
+        inventoryServiceClient.update(order.getItems());
         LOGGER.info("Item Saved...");
 
     }
 
+    public Order getOrder(String orderId) {
+        LOGGER.info("Get Order ...");
+        return orderServiceClient.get(orderId);
+    }
+
+    public List<Item> getAllItems() {
+        return inventoryServiceClient.getAll();
+    }
 }

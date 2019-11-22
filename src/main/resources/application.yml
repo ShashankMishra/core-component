@@ -1,6 +1,6 @@
 client:
-  order-service:  https://yh1fou2g55.execute-api.us-east-1.amazonaws.com/dev/v1
-  inventory-service: https://cky0tief69.execute-api.us-east-1.amazonaws.com/dev/v1
+  order-service:  https://95h0bn0gwk.execute-api.us-east-1.amazonaws.com/dev/v1
+  inventory-service: https://v3buu3vqn0.execute-api.us-east-1.amazonaws.com/dev/v1
 
 micronaut:
   application:

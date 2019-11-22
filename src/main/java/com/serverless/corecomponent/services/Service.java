@@ -23,8 +23,9 @@ public class Service {
 
     public void placeOrder(Order order) {
 
-        LOGGER.info("Saving Order ...");
+        LOGGER.info("Saving Order ... {} ",order);
         orderServiceClient.save(order);
+        LOGGER.info("Item Saving ... {} ",order.getItems());
         inventoryServiceClient.update(order.getItems());
         LOGGER.info("Item Saved...");
 

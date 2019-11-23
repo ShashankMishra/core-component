@@ -13,7 +13,7 @@ public class Item {
 
     private String name;
 
-    private String price;
+    private double price;
 
     private long quantity = 0;
 
